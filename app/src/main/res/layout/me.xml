@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="domain.com.newappquotes.Me">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/oupAvatarImg"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/logo"/>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#fff">
+
+        <Button
+            android:id="@+id/meLogoutButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/logout_butt"/>
+
+        <Button
+            android:id="@+id/mePostButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/post_butt"/>
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:text="Me"
+            android:textColor="#c69c6d"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <RadioButton
+            android:id="@+id/meMyQuotesRadioButt"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout"
+            android:buttonTint="#c69c6d"
+            android:checked="true"
+            android:fontFamily="sans-serif-condensed"
+            android:text="My Quotes"
+            android:textColor="#c69c6d"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/meLikedQuotesRadioButt"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_marginLeft="20dp"
+            android:buttonTint="#c69c6d"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Liked Quotes"
+            android:textColor="#c69c6d"
+            android:textSize="12sp"
+            android:checked="false"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/meFullnameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/oupAvatarImg"
+        android:layout_marginLeft="8dp"
+        android:layout_toEndOf="@+id/oupAvatarImg"
+        android:text="loading..."
+        android:textColor="#c69c6d"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/meActivityButt"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/meFullnameTxt"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/darker_gray"
+        android:text="Activity"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/meEditProfileButt"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:layout_alignEnd="@+id/meActivityButt"
+        android:layout_below="@+id/meActivityButt"
+        android:layout_marginTop="5dp"
+        android:background="#c69c6d"
+        android:text="Edit Profile"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+
+
+    <!-- TAB BAR -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/linearLayout2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_one"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_home"
+            android:layout_gravity="center_horizontal"
+            android:text="Home"
+            android:paddingTop="35dp"
+            android:textSize="10dp"
+            android:backgroundTint="#999"
+            android:textColor="#fff"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_two"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_me"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
+            android:paddingTop="35dp"
+            android:text="Me "
+            android:textSize="10dp"
+            android:textColor="#c69c6d"
+            android:backgroundTint="#c69c6d"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_three"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_about"
+            android:layout_marginLeft="60dp"
+            android:paddingTop="35dp"
+            android:text="About"
+            android:textSize="10dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#999"/>
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/meQuotesListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="7dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="1dp"/>
+
+</RelativeLayout>

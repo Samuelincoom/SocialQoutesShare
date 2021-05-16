@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/chCellBkg"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#c69c6d">
+
+
+        <TextView
+            android:id="@+id/chQuoteTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="65dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical|fill_vertical|center_horizontal|fill_horizontal"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="LOADING..."
+            android:textColor="#fff"
+            android:textSize="24sp"
+            android:textStyle="normal|bold"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/chAvatarImg"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:id="@+id/chFullnameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/chAvatarImg"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/chAvatarImg"
+            android:text="Loading..."
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="normal|bold"/>
+
+        <Button
+            android:id="@+id/chLikeButt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/chAvatarImg"
+            android:background="@drawable/like_butt"/>
+
+        <Button
+            android:id="@+id/chShareButt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/chLikeButt"
+            android:background="@drawable/share_butt"/>
+
+        <Button
+            android:id="@+id/chCommentButt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/chShareButt"
+            android:background="@drawable/comment_butt"/>
+
+        <Button
+            android:id="@+id/chReportButt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/chCommentButt"
+            android:background="@drawable/report_butt"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

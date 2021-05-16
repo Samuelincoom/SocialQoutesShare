@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "53382137202",
+    "project_id": "instaquotes-7bb1d",
+    "storage_bucket": "instaquotes-7bb1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53382137202:android:dde2e983c7ea47a92389eb",
+        "android_client_info": {
+          "package_name": "domain.com.newappquotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53382137202-vd7s1dqu5v55vcqroc26c5ii5svgau85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxvTYegxYK4y4DDKfYNFt1BEclppKPjuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53382137202-vd7s1dqu5v55vcqroc26c5ii5svgau85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

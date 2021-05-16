@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="domain.com.newappquotes.About">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:text="About"
+            android:textColor="#c69c6d"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="13dp"
+        android:text="Quotes Share app"
+        android:textColor="#333"
+        android:textSize="11sp"/>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_below="@+id/textView7"
+        android:layout_marginTop="19dp"
+        android:text="New InstaQuotes app ©2021 Absolute Encore\nAll Rights Reserved."
+        android:textColor="#333"
+        android:textSize="11sp"/>
+
+    <Button
+        android:id="@+id/abWebsiteButt"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_below="@+id/textView8"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif"
+        android:text="http://mywebsite.com"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="11sp"
+        android:textStyle="bold"/>
+
+
+    <Button
+        android:id="@+id/abEmailButt"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif"
+        android:text="info@mywebsite.com"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/abWebsiteButt"
+        android:layout_alignStart="@+id/abWebsiteButt"
+        android:layout_alignEnd="@+id/abWebsiteButt"/>
+
+    <Button
+        android:id="@+id/abFacebookButt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignStart="@+id/abEmailButt"
+        android:layout_below="@+id/abEmailButt"
+        android:background="@drawable/facebook_butt"
+        />
+
+    <Button
+        android:id="@+id/abTwitterButt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_below="@+id/abEmailButt"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/abFacebookButt"
+        android:background="@drawable/twitter_butt"/>
+
+    <LinearLayout
+        android:id="@+id/abLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignStart="@+id/abFacebookButt"
+        android:layout_below="@+id/abFacebookButt"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp"
+        android:background="#c69c6d"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/abLine"
+        android:layout_alignStart="@+id/abLine"
+        android:layout_below="@+id/abLine"
+        android:layout_marginTop="11dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Improvement of QuotesShare android app "
+        android:textColor="#333"
+        android:textSize="11sp"/>
+
+
+
+    <!-- TAB BAR -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/linearLayout2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_one"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_home"
+            android:layout_gravity="center_horizontal"
+            android:text="Home"
+            android:paddingTop="35dp"
+            android:textSize="10dp"
+            android:backgroundTint="#999"
+            android:textColor="#555"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_two"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_me"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
+            android:paddingTop="35dp"
+            android:text="Me "
+            android:textSize="10dp"
+            android:textColor="#555"
+            android:backgroundTint="#999"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_three"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_about"
+            android:layout_marginLeft="60dp"
+            android:paddingTop="35dp"
+            android:text="About"
+            android:textSize="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#c69c6d"
+            android:backgroundTint="#c69c6d"/>
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

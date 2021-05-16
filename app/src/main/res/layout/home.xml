@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context="domain.com.newappquotes.Home">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:background="#c69c6d">
+
+        <EditText
+            android:id="@+id/hSearchTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="6dp"
+            android:background="#fff"
+            android:ems="10"
+            android:hint="search quotes..."
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="#333"
+            android:textColorHint="#333"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+
+    <ListView
+        android:id="@+id/hQuotesListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/admobBanner"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="1dp"
+        android:layout_below="@+id/relativeLayout2" />
+
+    <!-- TAB BAR -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/linearLayout2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_one"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_home"
+            android:layout_gravity="center_horizontal"
+            android:text="Home"
+            android:paddingTop="35dp"
+            android:textSize="10dp"
+            android:textColor="#c69c6d"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_two"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_me"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
+            android:paddingTop="35dp"
+            android:text="Me "
+            android:textSize="10dp"
+            android:backgroundTint="#999"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_three"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_about"
+            android:layout_marginLeft="60dp"
+            android:paddingTop="35dp"
+            android:text="About"
+            android:textSize="10dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#999"/>
+    </LinearLayout>
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/admobBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ADMOB_BANNER_UNIT_ID"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_centerHorizontal="true">
+    </com.google.android.gms.ads.AdView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#fff">
+
+        <Button
+            android:id="@+id/hRefreshButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/refresh_butt"/>
+
+        <Button
+            android:id="@+id/hPostButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/post_butt"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:text="InstaQuotes"
+            android:textColor="#c69c6d"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

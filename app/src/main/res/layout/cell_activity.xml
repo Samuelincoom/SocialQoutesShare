@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/oupAvatarImg"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:id="@+id/cactTextTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/oupAvatarImg"
+        android:layout_below="@+id/cactDateTxt"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toEndOf="@+id/oupAvatarImg"
+        android:fontFamily="sans-serif-condensed"
+        android:maxLines="2"
+        android:text="loading..."
+        android:textColor="#333"
+        android:textSize="11sp"/>
+
+    <TextView
+        android:id="@+id/cactDateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_alignEnd="@+id/cactTextTxt"
+        android:layout_alignTop="@+id/oupAvatarImg"
+        android:text="loading..."
+        android:textSize="9sp"/>
+
+
+</RelativeLayout>

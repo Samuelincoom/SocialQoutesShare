@@ -1,0 +1,19 @@
+
+n
+java:S3776Ù"RRefactor this method to reduce its Cognitive Complexity from 88 to the 15 allowed.(ÉÀÃıÿÿÿÿ
+–
+java:S5803Í"zRemove this usage of "AdRequest", it is annotated with @VisibleForTesting and should not be accessed from production code.(ğ¸Ÿ—ÿÿÿÿÿ
+u
+java:S2293Ğ"YReplace the type specification in this constructor call with the diamond operator ("<>").(ßå‰×ÿÿÿÿÿ
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁŠå³
+W	java:S110="=This class has 10 parents which is greater than 5 authorized.(Òä˜üÿÿÿÿ
+R	java:S125Ş"<This block of commented-out lines of code should be removed.(’œ¼·
+u
+java:S3012á"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(„úÿ¿øÿÿÿÿ
+u
+java:S2293ß"YReplace the type specification in this constructor call with the diamond operator ("<>").(üŒÈ¥øÿÿÿÿ
+J
+java:S1172ò".Remove this unused method parameter "objects".(„ìŠøÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷‘š1
+p
+java:S2293ğ"YReplace the type specification in this constructor call with the diamond operator ("<>").(’‡é¸

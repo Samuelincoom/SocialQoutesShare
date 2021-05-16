@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="domain.com.newappquotes">
+
+    <!-- permissions -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- For Push Notifications -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+
+    <!-- IMPORTANT: Replace "domain.com.instaquotes" with your own Package name. -->
+    <permission android:name="domain.com.newappquotes.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <!-- IMPORTANT: Replace "domain.com.instaquotes" with your own Package name. -->
+    <uses-permission android:name="domain.com.instaquotes.permission.C2D_MESSAGE"/>
+
+
+
+
+    <application
+        android:name="domain.com.newappquotes.Configs"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light">
+
+        <!-- Splash screen -->
+        <activity
+            android:name="domain.com.newappquotes.SplashScreen"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+        <!-- file provider -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+
+
+        <!-- IMPORTANT: Replace "478517440140" with your own GCM Sender Id. -->
+        <meta-data android:name="com.parse.push.gcm_sender_id"
+            android:value="id:478517440140"/>
+
+
+        <service android:name="domain.com.newappquotes.firebase.MyFirebaseMessagingService"
+            android:exported="true"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="domain.com.newappquotes.firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+
+
+        <service android:name="com.parse.PushService"/>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+
+
+                <!-- IMPORTANT: Replace "domain.com.instaquotes" with your own Package name. -->
+                <category android:name="domain.com.instaquotes"/>
+
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE"/>
+                <action android:name="com.parse.push.intent.OPEN"/>
+                <action android:name="com.parse.push.intent.DELETE"/>
+            </intent-filter>
+        </receiver>
+
+
+
+        <!-- Other Activities -->
+        <activity android:name="domain.com.newappquotes.Home"/>
+        <activity android:name="domain.com.newappquotes.Login"/>
+        <activity android:name="domain.com.newappquotes.SignUp"/>
+        <activity android:name="domain.com.newappquotes.TermsOfUse"/>
+        <activity android:name="domain.com.newappquotes.OtherUserProfile"/>
+        <activity android:name="domain.com.newappquotes.Comments"/>
+        <activity android:name="domain.com.newappquotes.Me"/>
+        <activity android:name="domain.com.newappquotes.ActivityScreen"/>
+        <activity android:name="domain.com.newappquotes.EditProfile" />
+        <activity android:name="domain.com.newappquotes.AddPost" />
+        <activity android:name="domain.com.newappquotes.About" />
+    </application>
+
+</manifest>

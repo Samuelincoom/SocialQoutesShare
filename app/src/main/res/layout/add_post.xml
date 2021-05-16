@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPost">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/oupAvatarImg"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/oupFullnameTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/oupAvatarImg"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="50dp"
+        android:layout_toEndOf="@+id/oupAvatarImg"
+        android:text="loading..."
+        android:textColor="#c69c6d"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/apDismissButt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/oupFullnameTxt"
+        android:background="@drawable/dismiss_butt"/>
+
+    <EditText
+        android:id="@+id/apQuoteTxt"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/oupAvatarImg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#c69c6d"
+        android:ems="10"
+        android:hint="What's your quote?"
+        android:inputType="textMultiLine"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:singleLine="false"
+        android:textColor="#fff"
+        android:textColorHint="#f1f1f1"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/apPostButt"
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:text="POST"
+        android:textColor="#c69c6d"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/apColorsScrollView"
+        android:layout_alignParentEnd="true"/>
+
+    <HorizontalScrollView
+        android:id="@+id/apColorsScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/apQuoteTxt"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toStartOf="@+id/apPostButt"
+        android:background="#fff">
+
+        <LinearLayout
+            android:id="@+id/apColorsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+    </HorizontalScrollView>
+
+
+</RelativeLayout>

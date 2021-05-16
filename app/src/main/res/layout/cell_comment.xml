@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ccAvatarImg"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/ccFullnameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ccAvatarImg"
+        android:layout_marginLeft="8dp"
+        android:layout_toEndOf="@+id/ccAvatarImg"
+        android:fontFamily="sans-serif-condensed"
+        android:text="loading..."
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ccCommentTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ccFullnameTxt"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/ccAvatarImg"
+        android:fontFamily="sans-serif-condensed"
+        android:text="loading..."
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/ccDateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ccCommentTxt"
+        android:layout_alignEnd="@+id/ccCommentTxt"
+        android:fontFamily="sans-serif-condensed"
+        android:text="loading..."
+        android:textSize="10sp" />
+
+
+</RelativeLayout>
